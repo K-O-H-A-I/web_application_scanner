@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vulnerabilityscanner.MainController" spacing="10" padding="20">
+    <Label text="Enter URL to Scan:"/>
+    <TextField fx:id="urlTextField" promptText="http://example.com" prefWidth="300"/>
+    <Button fx:id="submitButton" text="Submit" prefWidth="100"/>
+    <Label fx:id="statusLabel" text="Status: Awaiting input..." />
+</VBox>
