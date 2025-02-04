@@ -8,28 +8,21 @@ import javafx.stage.Stage;
 
 public class MainApp extends Application {
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // Load the FXML file
-        Parent root = FXMLLoader.load(getClass().getResource("/com/yourcompany/webscanner/MainView.fxml"));
-
-        // Create a scene with the loaded FXML
+        // Load the FXML file for the main view
+        Parent root = FXMLLoader.load(getClass().getResource("src/main/resources/fxml/MainView.fxml"));
+        
+        // Create a scene using the loaded FXML
         Scene scene = new Scene(root);
-
-        // Apply the CSS stylesheet
-        scene.getStylesheets().add(getClass().getResource("/com/yourcompany/webscanner/styles.css").toExternalForm());
-
-        // Set the title of the application window
-        primaryStage.setTitle("Web Vulnerability Scanner");
-
-        // Set the scene for the primary stage
+        
+        // Set the title and scene for the primary stage
+        primaryStage.setTitle("Web Application Vulnerability Scanner");
         primaryStage.setScene(scene);
-
-        // Show the application window
         primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }
